@@ -7,6 +7,7 @@ import '@mantine/carousel/styles.css'; import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import 'animate.css';
 
 import Home from './pages/Home.jsx';
 
