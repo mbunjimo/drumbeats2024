@@ -21,12 +21,12 @@ const Footer = () => {
         </div>
 
 
-        <div className='flex flex-col text-left'>
-          <p className='font-semibold text-xl'>Contacts:</p>
+        <div className='flex flex-col md:text-left'>
+          <p className='font-semibold text-xl my-3  md:my-1'>Contacts:</p>
           <p className='text-lg'>+255 676 890 789</p>
           <p className='text-lg'>+255 676 890 789</p>
           <p className='font-semibold text-xl my-3'>Social Media:</p>
-          <div className='flex flex-row  gap-3 '>
+          <div className='flex flex-row items-center justify-center md:justify-start gap-3 '>
             <Avatar src={twitter} radius=" " alt="it's me" />
             <Avatar src={instagram} radius=" " alt="it's me" />
           </div>
