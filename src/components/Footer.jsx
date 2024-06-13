@@ -32,10 +32,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='flex flex-col'>
+        <div className='flex flex-col justify-center items-center md:items-start '>
           <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]  mb-5' size="md" radius="xl" >
             <a>
-              Send a Message
+              Send us Message
             </a>
           </Button>
           <p>2024 Drumbeats. All Rights reserved.</p>
