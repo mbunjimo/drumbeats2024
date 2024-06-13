@@ -1,5 +1,5 @@
 import React from 'react'
-import { Events, Footer, Header, HomeCarousel } from '../components'
+import { Events, Footer, Header, HomeCarousel, InfiniteCarousel } from '../components'
 import { Button, Image, SimpleGrid } from '@mantine/core'
 import president from '../assets/drsamia.jpg'
 import groupphoto from '../assets/group-photo-2.jpg'
@@ -21,7 +21,7 @@ const Home = () => {
                         <div className="flex flex-col justify-center gap-8">
                             <h1 className="h1-bold">We are presenting to you, Drumbeats carnival limted </h1>
                             <p className="p-regular-20 md:p-regular-24">Book and learn helpful tips from 3,168+ mentors in world-class companies with our global community.</p>
-                            <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="lg" radius="xl"> 
+                            <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="lg" radius="xl">
                                 <a>
                                     Explore Now
                                 </a>
@@ -40,6 +40,20 @@ const Home = () => {
                         />
                     </div>
                 </section>
+
+                <section id="gallery" className="wrapper my-8 flex flex-row justify-between gap-8 md:gap-12">
+                    <h2 className="h2-bold">Gallery</h2>
+
+                    <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="md" radius="xl">
+                        <a>
+                            See More
+                        </a>
+                    </Button>
+
+                </section>
+
+                <InfiniteCarousel />
+
 
                 <section id="events" className="wrapper my-8 flex flex-col gap-8 md:gap-12">
                     <h2 className="h2-bold">Planned to host <br /> Thousands of Events</h2>
