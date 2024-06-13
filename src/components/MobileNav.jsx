@@ -1,6 +1,7 @@
 import { Button, Image } from '@mantine/core'
 import React from 'react'
 import close from '../assets/close.png'
+import { Link } from 'react-router-dom'
 
 const MobileNav = ({ onClose }) => {
   return (
@@ -15,10 +16,18 @@ const MobileNav = ({ onClose }) => {
             onClick={onClose}
           />
         </div>
-        <p className='text-center my-2 text-xl border-b'>Home</p>
-        <p className='text-center my-2 text-xl border-b'>About Us</p>
+        <Link to={'/'}>
+          <p className='text-center my-2 text-xl border-b'>Home</p>
+        </Link>
+        <Link to={'/aboutus'}> 
+          <p className='text-center my-2 text-xl border-b'>About Us</p>
+        </Link>
+        <Link to={'/gallery'}>  
         <p className='text-center my-2 text-xl border-b'>Media</p>
+        </Link>
+        <Link to={'/gallery'}>  
         <p className='text-center my-2 text-xl'>Connect</p>
+        </Link>
         <div className='text-center mt-3'>
           <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="md" radius="xl">
             <a>

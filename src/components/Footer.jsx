@@ -1,4 +1,4 @@
-import { Image } from '@mantine/core'
+import { Button, Image } from '@mantine/core'
 import React from 'react'
 import logo from '../assets/logo.png'
 import instagram from "../assets/instagram.png"
@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
 
 
-        <div className='flex flex-col md:text-left'>
+        <div className='flex flex-col  justify-start md:text-left'>
           <p className='font-semibold text-xl my-3  md:my-1'>Contacts:</p>
           <p className='text-lg'>+255 676 890 789</p>
           <p className='text-lg'>+255 676 890 789</p>
@@ -32,7 +32,14 @@ const Footer = () => {
           </div>
         </div>
 
-        <p>2024 Drumbeats. All Rights reserved.</p>
+        <div className='flex flex-col'>
+          <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]  mb-5' size="md" radius="xl" >
+            <a>
+              Send a Message
+            </a>
+          </Button>
+          <p>2024 Drumbeats. All Rights reserved.</p>
+        </div>
       </div>
     </footer>
   )

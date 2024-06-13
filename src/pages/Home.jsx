@@ -6,6 +6,7 @@ import groupphoto from '../assets/group-photo-2.jpg'
 import utiajiwasaini from '../assets/Utiajiwasaini.jpg'
 import drumbeatsbanner from '../assets/Drumbeats.jpg'
 import sittingwoman from '../assets/sittingwoman.jpg'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
     return (
@@ -44,11 +45,13 @@ const Home = () => {
                 <section id="gallery" className="wrapper my-8 flex flex-row justify-between gap-8 md:gap-12">
                     <h2 className="h2-bold">Gallery</h2>
 
-                    <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="md" radius="xl">
-                        <a>
-                            See More
-                        </a>
-                    </Button>
+                    <Link to={'/gallery'}>
+                        <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="md" radius="xl">
+                            <a>
+                                See More
+                            </a>
+                        </Button>
+                    </Link>
 
                 </section>
 

@@ -1,19 +1,20 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { Button, Image } from '@mantine/core';
 import logo from '../assets/logo.png'
 import menu from "../assets/menu.png"
 import MobileNav from './MobileNav';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
 
-    // State to manage the visibility of MobileNav
-    const [isMobileNavVisible, setMobileNavVisible] = useState(false);
+  // State to manage the visibility of MobileNav
+  const [isMobileNavVisible, setMobileNavVisible] = useState(false);
 
-    // Function to toggle MobileNav visibility
-    const toggleMobileNav = () => {
-      setMobileNavVisible(!isMobileNavVisible);
-    };
+  // Function to toggle MobileNav visibility
+  const toggleMobileNav = () => {
+    setMobileNavVisible(!isMobileNavVisible);
+  };
 
   return (
     <div className='static'>
@@ -33,10 +34,19 @@ const Navbar = () => {
 
           <div className='hidden md:block'>
             <ul className="md:flex-between flex w-full flex-col items-start gap-5 md:flex-row">
-              <li className='flex-center p-medium-16 whitespace-nowrap'>Home</li>
-              <li className='flex-center p-medium-16 whitespace-nowrap'>About Us</li>
-              <li className='flex-center p-medium-16 whitespace-nowrap'>Media</li>
-              <li className='flex-center p-medium-16 whitespace-nowrap'>Connect</li>
+              <Link to={'/'}>
+                <li className='flex-center p-medium-16 whitespace-nowrap'>Home</li>
+              </Link>
+              <Link to={'/aboutus'}>
+                <li className='flex-center p-medium-16 whitespace-nowrap'>About Us</li>
+              </Link>
+              <Link to={'/gallery'}>
+                <li className='flex-center p-medium-16 whitespace-nowrap'>Media</li>
+              </Link>
+              <Link to={'/gallery'}>
+                <li className='flex-center p-medium-16 whitespace-nowrap'>Connect</li>
+              </Link>
+
             </ul>
           </div>
 
