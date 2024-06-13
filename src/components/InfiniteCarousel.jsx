@@ -20,6 +20,7 @@ const InfiniteCarousel = () => {
       slidesToScroll={1}
       withControls={false}
       plugins={[autoplay.current]}
+      dragFree
       slideSize={{ base: '75%', sm: '50%', md: '25%' }}
     // onMouseEnter={autoplay.current.stop}
     // onMouseLeave={autoplay.current.reset} 

@@ -15,7 +15,7 @@ const HomeCarousel = () => {
   return (
     <div className='wrapper'>
       <Carousel 
-      height={500}
+      height={600}
       loop 
       className='rounded-lg'
       plugins={[autoplay.current]}
