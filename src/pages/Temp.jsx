@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import sittingwoman from '../assets/sittingwoman.jpg';
+import axios from 'axios';
 import baselogo from '../assets/BaseLogo.png';
 import { Footer, Header } from '../components';
 import { Button, Image, Input, Select } from '@mantine/core';
@@ -16,7 +17,13 @@ const Temp = () => {
     const [email, setEmail] = useState('');
     const [source, setSource] = useState('');
 
-    const handleSubmit = () => {
+    const handleSubmit = async ()  => {
+
+        if (!name || !phone || !email) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
         const body = {
             name,
             phone,
@@ -26,6 +33,13 @@ const Temp = () => {
 
         // Send 'body' to the backend
         console.log(body);
+
+        try {
+            const response = await axios.post('https://drumbeatsbackend.onrender.com/visitors', body);
+            console.log('Data sent successfully:', response.data);
+        } catch (error) {
+            console.error('Error sending data:', error);
+        }
 
         // Close the modal after submission
         close();
@@ -89,6 +103,7 @@ const Temp = () => {
                                 placeholder=""
                                 color='black'
                                 value={name}
+                                required
                                 onChange={(e) => setName(e.target.value)}
                             />
                         </div>
@@ -101,6 +116,7 @@ const Temp = () => {
                                 placeholder=""
                                 color='black'
                                 value={phone}
+                                required
                                 onChange={(e) => setPhone(e.target.value)}
                             />
                         </div>
@@ -113,6 +129,7 @@ const Temp = () => {
                                 placeholder=""
                                 color='black'
                                 value={email}
+                                required
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
@@ -123,6 +140,7 @@ const Temp = () => {
                                 size="lg"
                                 radius="xl"
                                 placeholder=""
+                                searchable
                                 data={[
                                     'Instagram',
                                     'Facebook',
