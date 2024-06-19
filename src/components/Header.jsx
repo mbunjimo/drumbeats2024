@@ -44,10 +44,10 @@ const Navbar = () => {
 
           <div className='hidden md:block'>
             <ul className="md:flex-between flex w-full flex-col items-start gap-5 md:flex-row">
-              <Link to={'/'}>
+              {/* <Link to={'/'}>
                 <li className='flex-center p-medium-16 whitespace-nowrap'>Home</li>
-              </Link>
-              <Link to={'/aboutus'}>
+              </Link> */}
+              {/* <Link to={'/aboutus'}>
                 <li className='flex-center p-medium-16 whitespace-nowrap'>About Us</li>
               </Link>
               <Link to={'/gallery'}>
@@ -55,7 +55,7 @@ const Navbar = () => {
               </Link>
               <Link to={'/gallery'}>
                 <li className='flex-center p-medium-16 whitespace-nowrap'>Connect</li>
-              </Link>
+              </Link> */}
 
             </ul>
           </div>
