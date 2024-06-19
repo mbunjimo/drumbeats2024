@@ -42,6 +42,13 @@ const AboutUs = () => {
                     </div>
                 </section>
 
+                <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
+                    <div className='flex flex-col justify-center gap-6'>
+                        <h1 className='h1-bold'>More about us</h1>
+                        <p className='p-regular-20 md:p-regular-24"'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta quasi aspernatur hic voluptatibus, impedit facere quas sed obcaecati pariatur excepturi saepe cupiditate necessitatibus eaque cum, amet iste. Consequuntur, blanditiis atque.</p>
+                    </div>
+                </section>
+
 
             </main>
             <Footer />
