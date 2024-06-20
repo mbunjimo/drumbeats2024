@@ -34,6 +34,8 @@ const Temp = () => {
 
         // Send 'body' to the backend
         console.log(body);
+        
+        close();
 
         try {
             const response = await axios.post('https://drumbeatsbackend.onrender.com/visitors', body);
@@ -43,7 +45,6 @@ const Temp = () => {
         }
 
         // Close the modal after submission
-        close();
     };
 
     return (
