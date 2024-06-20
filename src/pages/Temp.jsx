@@ -62,11 +62,10 @@ const Temp = () => {
                         />
 
                         <div className="flex flex-col justify-center gap-8">
-                            <h1 className="h1-bold">whats about drumbeats carnival?</h1>
+                            <h1 className="h1-bold">It's Media Day at Makumbusho Village</h1>
                             <p className="p-regular-20 md:p-regular-24">
-                                We are an organizing company that aims at delivering this event with very high expectations of it being the best carnival in Tanzania and beyond.
-                                We are an organizing company that aims at delivering this event with very high expectations of it being the best carnival in Tanzania and beyond.
-                            </p>
+                            Our website is currently under final stages of construction. We apologize for any inconvenience and appreciate your patience.
+                                </p>
                         </div>
                     </div>
                 </section>

@@ -71,7 +71,7 @@ const Navbar = () => {
 
 
           <div className='hidden md:block' >
-            <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="md" radius="xl" >
+            <Button variant="filled" disabled color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="md" radius="xl" >
                 Get Tickets
             </Button>
           </div>
