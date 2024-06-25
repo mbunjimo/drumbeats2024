@@ -19,19 +19,19 @@ const MobileNav = ({ onClose }) => {
         <Link to={'/'}>
           <p className='text-center my-2 text-xl border-b'>Home</p>
         </Link>
-        <Link to={'/aboutus'}> 
+        <Link to={'/aboutus'}>
           <p className='text-center my-2 text-xl border-b'>About Us</p>
         </Link>
-        <Link to={'/gallery'}>  
-        <p className='text-center my-2 text-xl border-b'>Media</p>
+        <Link to={'/gallery'}>
+          <p className='text-center my-2 text-xl border-b'>Media</p>
         </Link>
-        <Link to={'/gallery'}>  
-        <p className='text-center my-2 text-xl'>Connect</p>
+        <Link to={'/gallery'}>
+          <p className='text-center my-2 text-xl'>Connect</p>
         </Link>
         <div className='text-center mt-3'>
           <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="md" radius="xl">
             <a>
-              Explore Now
+              Get connected
             </a>
           </Button>
         </div>

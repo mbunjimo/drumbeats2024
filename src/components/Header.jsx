@@ -22,32 +22,32 @@ const Navbar = () => {
       <div className='w-full border-b '>
         <div className='wrapper flex items-center justify-between'>
 
-        <Link to={'/'}>
-          <div className='flex flex-row items-center' >
-            <Image
-              radius="md"
-              // h={50}
-              // w={50}
-              className='h-[50px] w-[50px] md:h-[40px] md:w-[40px]'
-              src={mnwcartoon}
-            />
-            <Image
-              radius="md"
-              // h={50}
-              // w={50}
-              className='h-[50px] w-[50px] md:h-[40px] md:w-[40px]'
-              src={textdrumbeats}
-            />
-            {/* <p className='font-bold text-xl text-left md:text-lg'>Drumbeats  Carnival</p> */}
-          </div>
+          <Link to={'/'}>
+            <div className='flex flex-row items-center' >
+              <Image
+                radius="md"
+                // h={50}
+                // w={50}
+                className='h-[50px] w-[50px] md:h-[40px] md:w-[40px]'
+                src={mnwcartoon}
+              />
+              <Image
+                radius="md"
+                // h={50}
+                // w={50}
+                className='h-[50px] w-[50px] md:h-[40px] md:w-[40px]'
+                src={textdrumbeats}
+              />
+              {/* <p className='font-bold text-xl text-left md:text-lg'>Drumbeats  Carnival</p> */}
+            </div>
           </Link>
 
           <div className='hidden md:block'>
             <ul className="md:flex-between flex w-full flex-col items-start gap-5 md:flex-row">
-              {/* <Link to={'/'}>
+              <Link to={'/'}>
                 <li className='flex-center p-medium-16 whitespace-nowrap'>Home</li>
-              </Link> */}
-              {/* <Link to={'/aboutus'}>
+              </Link>
+              <Link to={'/aboutus'}>
                 <li className='flex-center p-medium-16 whitespace-nowrap'>About Us</li>
               </Link>
               <Link to={'/gallery'}>
@@ -55,7 +55,7 @@ const Navbar = () => {
               </Link>
               <Link to={'/gallery'}>
                 <li className='flex-center p-medium-16 whitespace-nowrap'>Connect</li>
-              </Link> */}
+              </Link>
 
             </ul>
           </div>
@@ -72,7 +72,7 @@ const Navbar = () => {
 
           <div className='hidden md:block' >
             <Button variant="filled" disabled color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="md" radius="xl" >
-                Get Tickets
+              Get connected
             </Button>
           </div>
 

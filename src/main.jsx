@@ -17,7 +17,7 @@ import Temp from './pages/Temp.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Temp />,
+    element: <Home />,
 
   },
   {

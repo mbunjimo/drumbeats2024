@@ -5,6 +5,15 @@ import groupphoto from '../assets/group-photo-2.jpg'
 import utiajiwasaini from '../assets/Utiajiwasaini.jpg'
 import Autoplay from 'embla-carousel-autoplay';
 import { Image } from '@mantine/core';
+import artguy from '../assets/Mediaday/artguy.jpg'
+import sidegirls from '../assets/Mediaday/sidegirls.jpg'
+import talk from '../assets/Mediaday/talk.jpg'
+import tangazo from '../assets/Mediaday/tangazo.jpg'
+import tangazo2 from '../assets/Mediaday/tangazo2.jpg'
+import twogirls from '../assets/Mediaday/twogirls.jpg'
+import speech from '../assets/Mediaday/speech.jpg'
+import dancing from '../assets/Mediaday/dancing.jpg'
+
 
 const InfiniteCarousel = () => {
 
@@ -29,40 +38,35 @@ const InfiniteCarousel = () => {
         <Image
           radius="xl"
           className='rounded-lg h-full w-full'
-          src={president}
+          src={artguy}
         />
       </Carousel.Slide>
       <Carousel.Slide>
         <Image
           radius="xl"
           className='rounded-lg h-full w-full'
-          src={groupphoto}
+          src={sidegirls}
         />
       </Carousel.Slide>
       <Carousel.Slide>
         <Image
           radius="xl"
           className='rounded-lg h-full w-full'
-          src={utiajiwasaini}
+          src={tangazo2}
         />
       </Carousel.Slide>
       <Carousel.Slide><Image
         radius="xl"
         className='rounded-lg h-full w-full'
-        src={groupphoto}
+        src={dancing}
       /></Carousel.Slide>
       <Carousel.Slide>
         <Image
           radius="xl"
           className='rounded-lg h-full w-full'
-          src={groupphoto}
+          src={talk}
         />
       </Carousel.Slide>
-      <Carousel.Slide><Image
-        radius="xl"
-        className='rounded-lg h-full w-full'
-        src={groupphoto}
-      /></Carousel.Slide>
     </Carousel>
   )
 }

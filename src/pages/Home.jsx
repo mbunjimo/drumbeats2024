@@ -1,14 +1,44 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Events, Footer, Header, HomeCarousel, InfiniteCarousel } from '../components'
 import { Button, Image, SimpleGrid } from '@mantine/core'
 import president from '../assets/drsamia.jpg'
 import groupphoto from '../assets/group-photo-2.jpg'
 import utiajiwasaini from '../assets/Utiajiwasaini.jpg'
 import drumbeatsbanner from '../assets/Drumbeats.jpg'
+import tangazo from '../assets/Mediaday/tangazo.jpg'
 import sittingwoman from '../assets/sittingwoman.jpg'
 import { Link } from 'react-router-dom'
+import { formatDistanceToNowStrict } from 'date-fns';
 
 const Home = () => {
+
+
+    const [timeLeft, setTimeLeft] = useState('');
+
+    useEffect(() => {
+        const targetDate = new Date('2024-07-24T00:00:00');
+        
+        const calculateTimeLeft = () => {
+            const now = new Date();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                setTimeLeft(`${days} days: ${hours} hours: ${minutes} minutes: ${seconds} seconds`);
+            } else {
+                setTimeLeft('The event has started!');
+            }
+        };
+
+        const intervalId = setInterval(calculateTimeLeft, 1000);
+        return () => clearInterval(intervalId);
+    }, []);
+
+
     return (
         <div className="flex h-screen flex-col">
             <Header />
@@ -20,18 +50,18 @@ const Home = () => {
                 <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
                     <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
                         <div className="flex flex-col justify-center gap-8">
-                            <h1 className="h1-bold">We are presenting to you, Drumbeats carnival limted </h1>
-                            <p className="p-regular-20 md:p-regular-24">Book and learn helpful tips from 3,168+ mentors in world-class companies with our global community.</p>
+                            <h1 className="h1-bold">Utamaduni Festival 2024</h1>
+                            <p className="p-regular-20 md:p-regular-24">A week-long celebration of Tanzanian culture in Songea, Ruvuma, from July 20th-26th, 2024. This festival will highlight the theme "Our Culture, Our Dignity," featuring music, dance, art, and traditional cuisine from Tanzania's 120 tribes. The festival aims to unite Tanzanians from all walks of life and attract international visitors.</p>
                             <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="lg" radius="xl">
                                 <a>
-                                    Explore Now
+                                    Get connected
                                 </a>
                             </Button>
                         </div>
 
                         <Image
                             p={30}
-                            src={sittingwoman}
+                            src={tangazo}
                             alt="hero"
                             radius="lg"
                             className='max-h-[500px]'
@@ -39,6 +69,18 @@ const Home = () => {
                             height={100}
                         // className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
                         />
+                    </div>
+                </section>
+
+                <section className="wrapper bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
+                    <div className='flex w-full justify-center'>
+                        <p className='text-2xl text-center'>All About Ruvuma Utamaduni Festival, July 2024. Countdown to the carnival.</p>
+                    </div>
+                    <div className='flex flex-col  w-full justify-center'>
+                        <p className='text-5xl mt-4 text-center'>{timeLeft}</p>
+                    </div>
+                    <div>
+
                     </div>
                 </section>
 
@@ -58,7 +100,7 @@ const Home = () => {
                 <InfiniteCarousel />
 
 
-                <section id="events" className="wrapper my-8 flex flex-col gap-8 md:gap-12">
+                {/* <section id="events" className="wrapper my-8 flex flex-col gap-8 md:gap-12">
                     <h2 className="h2-bold">Planned to host <br /> Thousands of Events</h2>
 
 
@@ -81,7 +123,7 @@ const Home = () => {
                     </SimpleGrid>
 
 
-                </section>
+                </section> */}
 
             </main>
             <Footer />

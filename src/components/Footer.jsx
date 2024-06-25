@@ -1,4 +1,4 @@
-import { Button, Image } from '@mantine/core'
+import { Button, Image, SimpleGrid } from '@mantine/core'
 import React from 'react'
 import logo from '../assets/logo.png'
 import instagram from "../assets/instagram.png"
@@ -12,16 +12,22 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer className="border-t">
-      <div className="flex-center wrapper flex-between flex flex-col gap-4   text-center sm:flex-row">
-        <div className='flex flex-row gap-3 items-center'>
+    <footer className="border-t pb-16">
+      {/* <div className="wrapper flex-between flex flex-col text-center sm:flex-row"> */}
+      <SimpleGrid
+      cols={{ base: 1, sm: 1, md: 3 }}
+      spacing={{ base: 20, sm: 'xl' }}
+      verticalSpacing={{ base: 'md', sm: 'xl' }}
+      className='wrapper  flex'
+    >
+        <div className='flex flex-row mt-2 items-start align-top relative'>
           <Link to={"/"}>
             {/* <Image
               src={logo}
               width={128}
               h={80}
             /> */}
-            <div className='flex flex-row items-center' >
+            <div className='flex flex-row' >
               <Image
                 radius="md"
                 h={70}
@@ -42,14 +48,18 @@ const Footer = () => {
         </div>
 
 
-        <div className='flex flex-col  justify-start md:text-left'>
-          <p className='font-semibold text-xl my-3  md:my-1'>Contacts:</p>
+        <div className=''>
+          <p className='font-semibold text-xl my-5  md:my-1'>Contacts:</p>
           <p className='text-lg'>
             <a href="tel:+255762543543">+255 762 543 543</a>
+            
+          </p>
+          <p className='text-lg mb-3'>
+          <a href="mailto:info@drumbeatzcarnival.co.tz">info@drumbeatzcarnival.co.tz</a>
           </p>
           {/* <p className='text-lg'>+255 676 890 789</p> */}
-          <p className='font-semibold text-xl my-3'>Social Media:</p>
-          <div className='flex flex-row items-center justify-center md:justify-start gap-3 '>
+          <p className='font-semibold text-xl my-5 md:my-3'>Social Media:</p>
+          <div className='flex flex-row items-center justify-start mt-3 mb-2 md:my-2 md:justify-start gap-3 '>
             <Link to={'/'}>
               <Avatar src={facebook} radius=" " alt="it's me" />
             </Link>
@@ -62,15 +72,19 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='flex flex-col justify-center items-center md:items-start '>
-          <Button variant="filled" disabled color="rgba(0, 0, 0, 1)" className='max-w-[200px]  mb-5' size="md" radius="xl" >
+        <div className=' items-start '>
+          {/* <Button variant="filled" disabled color="rgba(0, 0, 0, 1)" className='max-w-[200px]  mb-5' size="md" radius="xl" >
             <a>
-              Send us Message
+              Get connected
             </a>
-          </Button>
-          <p>2024 Drumbeats. All Rights reserved.</p>
+          </Button> */}
+          <p className='font-semibold text-xl mt-3 mb-3 md:my-1'>Our Address:</p>
+          <p className='flex text-left '>Raha Towers, <br /> 3rd Floor, <br /> Dar es Salaam, Tanzania</p>
+          <br />
+          <p> &copy; 2024 Drumbeats. All Rights reserved.</p>
         </div>
-      </div>
+        </SimpleGrid>
+      {/* </div> */}
     </footer >
   )
 }
