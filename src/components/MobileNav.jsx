@@ -1,9 +1,24 @@
-import { Button, Image } from '@mantine/core'
-import React from 'react'
-import close from '../assets/close.png'
-import { Link } from 'react-router-dom'
+import { useState } from 'react';
+import { Button, Image } from '@mantine/core';
+import React from 'react';
+import close from '../assets/close.png';
+import { Link } from 'react-router-dom';
+import VisitorsForm from './VisitorsForm';
 
 const MobileNav = ({ onClose }) => {
+  // State to control the visibility of the VisitorsForm modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Function to show the VisitorsForm modal
+  const handleButtonClick = () => {
+    setIsModalOpen(true);
+  };
+
+  // Function to close the VisitorsForm modal
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className='fixed inset-0 z-40'>
       <div className='fixed inset-0 bg-black bg-opacity-50'></div>
@@ -23,21 +38,23 @@ const MobileNav = ({ onClose }) => {
           <p className='text-center my-2 text-xl border-b'>About Us</p>
         </Link>
         <Link to={'/gallery'}>
-          <p className='text-center my-2 text-xl border-b'>Media</p>
-        </Link>
-        <Link to={'/gallery'}>
-          <p className='text-center my-2 text-xl'>Connect</p>
+          <p className='text-center my-2 text-xl border-b'>Gallery</p>
         </Link>
         <div className='text-center mt-3'>
-          <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="md" radius="xl">
-            <a>
-              Get connected
-            </a>
+          <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="md" radius="xl" onClick={handleButtonClick}>
+            Get connected
           </Button>
         </div>
       </div>
-    </div>
-  )
-}
 
-export default MobileNav
+      {/* Conditionally render the VisitorsForm modal */}
+      {isModalOpen && (
+        
+            <VisitorsForm />
+
+      )}
+    </div>
+  );
+};
+
+export default MobileNav;

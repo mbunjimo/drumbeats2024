@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Button, Image } from '@mantine/core';
-import mnwcartoon from '../assets/mnwcartoon.png'
-import textdrumbeats from '../assets/textdrumbeats.png'
-import menu from "../assets/menu.png"
+import mnwcartoon from '../assets/mnwcartoon.png';
+import textdrumbeats from '../assets/textdrumbeats.png';
+import menu from "../assets/menu.png";
 import MobileNav from './MobileNav';
-import { Link, redirect } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+import VisitorsForm from './VisitorsForm';
 
 const Navbar = () => {
-
   // State to manage the visibility of MobileNav
   const [isMobileNavVisible, setMobileNavVisible] = useState(false);
 
@@ -17,28 +16,35 @@ const Navbar = () => {
     setMobileNavVisible(!isMobileNavVisible);
   };
 
+  // State to control the visibility of the VisitorsForm modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Function to show the VisitorsForm modal
+  const handleButtonClick = () => {
+    setIsModalOpen(true);
+  };
+
+  // Function to close the VisitorsForm modal
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className='static'>
       <div className='w-full border-b '>
         <div className='wrapper flex items-center justify-between'>
-
           <Link to={'/'}>
-            <div className='flex flex-row items-center' >
+            <div className='flex flex-row items-center'>
               <Image
                 radius="md"
-                // h={50}
-                // w={50}
                 className='h-[50px] w-[50px] md:h-[40px] md:w-[40px]'
                 src={mnwcartoon}
               />
               <Image
                 radius="md"
-                // h={50}
-                // w={50}
                 className='h-[50px] w-[50px] md:h-[40px] md:w-[40px]'
                 src={textdrumbeats}
               />
-              {/* <p className='font-bold text-xl text-left md:text-lg'>Drumbeats  Carnival</p> */}
             </div>
           </Link>
 
@@ -51,12 +57,8 @@ const Navbar = () => {
                 <li className='flex-center p-medium-16 whitespace-nowrap'>About Us</li>
               </Link>
               <Link to={'/gallery'}>
-                <li className='flex-center p-medium-16 whitespace-nowrap'>Media</li>
+                <li className='flex-center p-medium-16 whitespace-nowrap'>Gallery</li>
               </Link>
-              <Link to={'/gallery'}>
-                <li className='flex-center p-medium-16 whitespace-nowrap'>Connect</li>
-              </Link>
-
             </ul>
           </div>
 
@@ -69,25 +71,25 @@ const Navbar = () => {
             />
           </div>
 
-
-          <div className='hidden md:block' >
-            <Button variant="filled" disabled color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="md" radius="xl" >
+          <div className='hidden md:block'>
+            <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="md" radius="xl" onClick={handleButtonClick}>
               Get connected
             </Button>
           </div>
-
         </div>
       </div>
-
-      {/* navbar for mobile users */}
 
       {isMobileNavVisible && (
         <div className='w-full flex items-center justify-center'>
           <MobileNav onClose={toggleMobileNav} />
         </div>
       )}
-    </div>
-  )
-}
 
-export default Navbar
+      {isModalOpen && (
+        <VisitorsForm isOpen={isModalOpen} onClose={handleModalClose} />
+      )}
+    </div>
+  );
+};
+
+export default Navbar;
