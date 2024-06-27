@@ -72,7 +72,7 @@ const Navbar = () => {
           </div>
 
           <div className='hidden md:block'>
-            <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="md" radius="xl" onClick={handleButtonClick}>
+            <Button variant="filled" color="#3A2C2C" className='max-w-[200px]' size="md" radius="xl" onClick={handleButtonClick}>
               Get connected
             </Button>
           </div>

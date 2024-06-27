@@ -3,10 +3,15 @@ import { useRef } from 'react';
 import { Carousel } from '@mantine/carousel';
 import { Image, Overlay, Text } from '@mantine/core';
 import president from '../assets/drsamia.jpg'
-import groupphoto from '../assets/group-photo-2.jpg'
-import utiajiwasaini from '../assets/Utiajiwasaini.jpg'
 import Autoplay from 'embla-carousel-autoplay';
-
+import artguy from '../assets/CompressedMediaDay/artguy.webp'
+import sidegirls from '../assets/CompressedMediaDay/sidegirls.webp'
+import talk from '../assets/CompressedMediaDay/talk.webp'
+import tangazo from '../assets/CompressedMediaDay/tangazo.webp'
+import tangazo2 from '../assets/CompressedMediaDay/tangazo2.webp'
+import twogirls from '../assets/CompressedMediaDay/twogirls.webp'
+import speech from '../assets/CompressedMediaDay/speech.webp'
+import dancing from '../assets/CompressedMediaDay/dancing.webp'
 
 const HomeCarousel = () => {
 
@@ -42,10 +47,12 @@ const HomeCarousel = () => {
           <div className='absolute bottom-0 left-0 right-0 text-center flex flex-col justify-center w-full'>
             <div className='w-full p-8'>
               <p className='h3-bold text-white text-center z-50'>
-                Drumbeats carnival limted
+                Drumbeats carnival 20-27<sup>th</sup> July 2024
               </p>
-              <p className='text-white p-regular-20 md:p-regular-24'>Book and learn helpful tips
-                from 3,168+ mentors in world-class companies with our global community.</p>
+              <p className='text-white p-regular-20 md:p-regular-24'>
+                '120 TRIBES, 1 PEOPLE ' <br />
+                TWENZETU SONGEA
+              </p>
             </div>
           </div>
 
@@ -56,7 +63,7 @@ const HomeCarousel = () => {
           <Image
             radius="xl"
             className='rounded-lg h-full w-full'
-            src={groupphoto}
+            src={speech}
           />
 
           <Overlay
@@ -69,10 +76,12 @@ const HomeCarousel = () => {
           <div className='absolute bottom-0 left-0 right-0 text-center flex flex-col justify-center w-full'>
             <div className='w-full p-8'>
               <p className='h3-bold text-white text-center z-50'>
-                Drumbeats carnival limted
+              Drumbeats carnival Press launch
               </p>
-              <p className='text-white p-regular-20 md:p-regular-24'>Book and learn helpful tips
-                from 3,168+ mentors in world-class companies with our global community.</p>
+              <p className='text-white p-regular-20 md:p-regular-24'>
+                The press launch for the national cultural festival was <br />
+                held on makumbusho village grounds dar es salaam on 21<sup>st</sup> June 2024  
+              </p>
             </div>
           </div>
 
@@ -81,7 +90,7 @@ const HomeCarousel = () => {
           <Image
             radius="xl"
             className='rounded-lg h-full w-full'
-            src={utiajiwasaini}
+            src={tangazo2}
           />
 
           <Overlay
@@ -94,10 +103,10 @@ const HomeCarousel = () => {
           <div className='absolute bottom-0 left-0 right-0 text-center flex flex-col justify-center w-full'>
             <div className='w-full p-8'>
               <p className='h3-bold text-white text-center z-50'>
-                Drumbeats carnival limted
+              Celebrate Tanzanian Culture
               </p>
-              <p className='text-white p-regular-20 md:p-regular-24'>Book and learn helpful tips
-                from 3,168+ mentors in world-class companies with our global community.</p>
+              <p className='text-white p-regular-20 md:p-regular-24'>The smiles radiate excitement and pride in showcasing Tanzania's rich cultural heritage.
+                 Join us for an unforgettable celebration of art, music, and culture this July!</p>
             </div>
           </div>
 

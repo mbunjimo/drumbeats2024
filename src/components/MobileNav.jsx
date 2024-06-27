@@ -50,7 +50,7 @@ const MobileNav = ({ onClose }) => {
       {/* Conditionally render the VisitorsForm modal */}
       {isModalOpen && (
         
-            <VisitorsForm />
+            <VisitorsForm isOpen={isModalOpen} onClose={handleModalClose} />
 
       )}
     </div>

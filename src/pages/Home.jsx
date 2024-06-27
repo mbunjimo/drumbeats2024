@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react'
-import { Events, Footer, Header, HomeCarousel, InfiniteCarousel } from '../components'
+import React, { useEffect, useState } from 'react'
+import { Events, Footer, Header, HomeCarousel, InfiniteCarousel, VisitorsForm } from '../components'
 import { Button, Image, SimpleGrid } from '@mantine/core'
 import president from '../assets/drsamia.jpg'
 import groupphoto from '../assets/group-photo-2.jpg'
@@ -12,34 +12,66 @@ import sittingwoman from '../assets/sittingwoman.jpg'
 import { Link } from 'react-router-dom'
 import { formatDistanceToNowStrict } from 'date-fns';
 
+
 const Home = () => {
 
 
-    const [timeLeft, setTimeLeft] = useState('');
+    const [timeLeft, setTimeLeft] = useState({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+        eventStarted: false,
+    });
 
     useEffect(() => {
         const targetDate = new Date('2024-07-24T00:00:00');
-        
+    
         const calculateTimeLeft = () => {
             const now = new Date();
             const difference = targetDate - now;
-
+    
             if (difference > 0) {
                 const days = Math.floor(difference / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-                setTimeLeft(`${days} days: ${hours} hours: ${minutes} minutes: ${seconds} seconds`);
+    
+                setTimeLeft({
+                    days,
+                    hours,
+                    minutes,
+                    seconds,
+                    eventStarted: false,
+                });
             } else {
-                setTimeLeft('The event has started!');
+                setTimeLeft({
+                    days: 0,
+                    hours: 0,
+                    minutes: 0,
+                    seconds: 0,
+                    eventStarted: true,
+                });
             }
         };
-
+    
         const intervalId = setInterval(calculateTimeLeft, 1000);
         return () => clearInterval(intervalId);
     }, []);
 
+
+    // State to control the visibility of the VisitorsForm modal
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    // Function to show the VisitorsForm modal
+    const handleButtonClick = () => {
+        setIsModalOpen(true);
+    };
+
+    // Function to close the VisitorsForm modal
+    const handleModalClose = () => {
+        setIsModalOpen(false);
+    };
 
     return (
         <div className="flex h-screen flex-col">
@@ -54,10 +86,8 @@ const Home = () => {
                         <div className="flex flex-col justify-center gap-8">
                             <h1 className="h1-bold">Utamaduni Festival 2024</h1>
                             <p className="p-regular-20 md:p-regular-24">A week-long celebration of Tanzanian culture in Songea, Ruvuma, from July 20th-26th, 2024. This festival will highlight the theme "Our Culture, Our Dignity," featuring music, dance, art, and traditional cuisine from Tanzania's 120 tribes. The festival aims to unite Tanzanians from all walks of life and attract international visitors.</p>
-                            <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="lg" radius="xl">
-                                <a>
-                                    Get connected
-                                </a>
+                            <Button variant="filled" color="#3A2C2C" className='max-w-[200px]' size="lg" radius="xl" onClick={handleButtonClick}>
+                                Get connected
                             </Button>
                         </div>
 
@@ -78,9 +108,18 @@ const Home = () => {
                     <div className='flex w-full justify-center'>
                         <p className='text-2xl text-center'>All About Ruvuma Utamaduni Festival, July 2024. Countdown to the carnival.</p>
                     </div>
-                    <div className='flex flex-col  w-full justify-center'>
-                        <p className='text-5xl mt-4 text-center'>{timeLeft}</p>
-                    </div>
+                    <div className='flex flex-col w-full justify-center'>
+                    {!timeLeft.eventStarted ? (
+                        <div className='text-5xl mt-4 text-center'>
+                            <p className='block md:inline'>{timeLeft.days} days: </p>
+                            <p className="block md:inline">{timeLeft.hours} hours: </p>
+                            <p className="block md:inline">{timeLeft.minutes} minutes: </p>
+                            <p className="block md:inline">{timeLeft.seconds} seconds</p>
+                        </div>
+                    ) : (
+                        <p className='text-5xl mt-4 text-center'>The event has started!</p>
+                    )}
+                </div>
                     <div>
 
                     </div>
@@ -90,7 +129,7 @@ const Home = () => {
                     <h2 className="h2-bold">Gallery</h2>
 
                     <Link to={'/gallery'}>
-                        <Button variant="filled" color="rgba(0, 0, 0, 1)" className='max-w-[200px]' size="md" radius="xl">
+                        <Button variant="filled" color="#3A2C2C" className='max-w-[200px]' size="md" radius="xl">
                             <a>
                                 See More
                             </a>
@@ -105,7 +144,7 @@ const Home = () => {
                     <h2 className="h2-bold text-center">Our Services</h2>
 
 
-                    <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
+                    <div className="wrapper grid grid-cols-1  md:grid-cols-2 2xl:gap-0">
                         <div className="flex flex-col justify-center gap-8">
                             <p className="text-4xl font-bold text-start">Arts and Cultural Promotions</p>
                             <p className="p-regular-20 md:text-2xl text-start">
@@ -127,10 +166,9 @@ const Home = () => {
                     </div>
 
 
-                    <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
+                    <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0 border-t">
 
                         <Image
-                            p={30}
                             src={collage2}
                             alt="hero"
                             radius="lg"
@@ -140,7 +178,7 @@ const Home = () => {
                         // className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
                         />
 
-                        <div className="flex flex-col justify-center gap-8">
+                        <div className="flex flex-col justify-center gap-8 md:ml-4">
                             <p className="text-4xl font-bold text-start">Event Management:</p>
                             <p className="p-regular-20 md:text-2xl text-start">
                                 <span className='font-semibold'>Comprehensive Event Planning: </span> From concept to execution, we manage every detail to ensure successful events. <br />
@@ -184,6 +222,10 @@ const Home = () => {
 
             </main>
             <Footer />
+
+            {isModalOpen && (
+                <VisitorsForm isOpen={isModalOpen} onClose={handleModalClose} />
+            )}
         </div>
     )
 }

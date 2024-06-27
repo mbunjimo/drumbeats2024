@@ -15,12 +15,12 @@ const Footer = () => {
     <footer className="border-t pb-16">
       {/* <div className="wrapper flex-between flex flex-col text-center sm:flex-row"> */}
       <SimpleGrid
-      cols={{ base: 1, sm: 1, md: 3 }}
-      spacing={{ base: 20, sm: 'xl' }}
-      verticalSpacing={{ base: 'md', sm: 'xl' }}
-      className='wrapper  flex'
-    >
-        <div className='flex flex-row mt-2 items-start align-top relative'>
+        cols={{ base: 1, sm: 1, md: 3 }}
+        spacing={{ base: 20, sm: 'xl' }}
+        verticalSpacing={{ base: 'md', sm: 'xl' }}
+        className='wrapper  flex'
+      >
+        <div className='flex flex-row mt-3 items-start align-top relative'>
           <Link to={"/"}>
             {/* <Image
               src={logo}
@@ -48,42 +48,41 @@ const Footer = () => {
         </div>
 
 
-        <div className=''>
-          <p className='font-semibold text-xl my-5  md:my-1'>Contacts:</p>
+        <div className='text-center md:text-start mt-2'>
+          <p className='font-semibold text-xl my-5   md:my-1'>contacts</p>
+          <p className='text-lg'>
+            <a href="tel:+255744927614">+255 744 927 614</a>
+
+          </p>
           <p className='text-lg'>
             <a href="tel:+255762543543">+255 762 543 543</a>
-            
+
           </p>
           <p className='text-lg mb-3'>
-          <a href="mailto:info@drumbeatzcarnival.co.tz">info@drumbeatzcarnival.co.tz</a>
+            <a href="mailto:info@drumbeatzcarnival.co.tz">info@drumbeatzcarnival.co.tz</a>
           </p>
           {/* <p className='text-lg'>+255 676 890 789</p> */}
-          <p className='font-semibold text-xl my-5 md:my-3'>Social Media:</p>
-          <div className='flex flex-row items-center justify-start mt-3 mb-2 md:my-2 md:justify-start gap-3 '>
+          <p className='font-semibold text-xl my-5 md:my-3'>social media</p>
+          <div className='flex flex-row items-center justify-center mt-3 mb-2 md:my-2 md:justify-start gap-3 '>
             <Link to={'/'}>
-              <Avatar src={facebook} radius=" " alt="it's me" />
+              <Avatar src={facebook} radius=" " alt="it's me" mr={2} />
             </Link>
             <Link to={'https://www.instagram.com/drumbeats_carnival/'}>
-              <Avatar src={instagram} radius=" " alt="it's me" />
+              <Avatar src={instagram} radius=" " alt="it's me" mx={5} />
             </Link>
             <Link to={'/'}>
-              <Avatar src={youtube} radius=" " alt="it's me" />
+              <Avatar src={youtube} radius=" " alt="it's me" ml={2} />
             </Link>
           </div>
         </div>
 
-        <div className=' items-start '>
-          {/* <Button variant="filled" disabled color="rgba(0, 0, 0, 1)" className='max-w-[200px]  mb-5' size="md" radius="xl" >
-            <a>
-              Get connected
-            </a>
-          </Button> */}
-          <p className='font-semibold text-xl mt-3 mb-3 md:my-1'>Our Address:</p>
-          <p className='flex text-left '>Raha Towers, <br /> 3rd Floor, <br /> Dar es Salaam, Tanzania</p>
+        <div className=' text-center md:text-start '>
+          <p className='font-semibold text-xl mt-3 mb-3 md:my-1'>our address</p>
+          <p className='flex justify-center md:justify-start w-full tect-center md:text-left '>Raha Towers, <br /> 3rd Floor, <br /> Dar es Salaam, Tanzania</p>
           <br />
           <p> &copy; 2024 Drumbeats. All Rights reserved.</p>
         </div>
-        </SimpleGrid>
+      </SimpleGrid>
       {/* </div> */}
     </footer >
   )

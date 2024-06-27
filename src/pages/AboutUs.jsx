@@ -1,7 +1,5 @@
 import React from 'react'
 import sittingwoman from '../assets/sittingwoman.jpg'
-import maasai from '../assets/Mediaday/maasai.jpg'
-import eventplan from '../assets/Mediaday/eventplan.jpg'
 import tangazo from '../assets/Mediaday/tangazo.jpg'
 import collage1 from '../assets/Mediaday/collage1.png'
 import collage2 from '../assets/Mediaday/collage2.png'
@@ -69,10 +67,9 @@ const AboutUs = () => {
                     </div>
 
 
-                    <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
+                    <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0 border-t md:bordrer-0 ">
 
                         <Image
-                            p={30}
                             src={collage2}
                             alt="hero"
                             radius="lg"
@@ -82,7 +79,7 @@ const AboutUs = () => {
                         // className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
                         />
 
-                        <div className="flex flex-col justify-center gap-8">
+                        <div className="flex flex-col justify-center gap-8  md:ml-4">
                             <p className="text-4xl font-bold text-start">Event Management:</p>
                             <p className="p-regular-20 md:text-2xl text-start">
                                 <span className='font-semibold'>Comprehensive Event Planning: </span> From concept to execution, we manage every detail to ensure successful events. <br />
@@ -97,78 +94,10 @@ const AboutUs = () => {
                     </div>
 
 
-                    {/* <SimpleGrid
-                        cols={{ base: 1, sm: 1, lg: 2 }}
-                        className='mt-16'>
-
-
-                        <div className='relative'>
-                            <Image
-                                radius="xl"
-                                className='rounded-lg h-[450px] md:h-[450px] w-full'
-                                src={eventplan}
-
-
-                            />
-
-
-                            <Overlay
-                                gradient="linear-gradient(0deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0) 100%)"
-                                opacity={0.85}
-                                radius="xl"
-                                zIndex={0}
-                            />
-
-                            <div className='absolute bottom-0 left-0 right-0 text-left flex flex-col justify-center w-full'>
-                                <div className='w-full p-8'>
-
-                                    <p className='text-white text-xl '> <span className='font-semibold text-3xl'>Event Management:</span> <br />
-                                        <span className='font-semibold'>Comprehensive Event Planning:</span> From concept to execution, we manage every detail to ensure successful events. <br />
-                                        <span className='font-semibold'>Festival Organization:</span> We organize large-scale cultural festivals, bringing together communities to celebrate Tanzanian heritage. <br />
-                                        <span className='font-semibold'>Corporate Events:</span> Tailored event solutions for businesses, including product launches, CSR activities, and corporate gatherings.
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div className='relative'>
-                            <Image
-                                radius="xl"
-                                className='rounded-lg h-[450px] md:h-[450px] w-full'
-                                src={maasai}
-
-
-                            />
-
-
-                            <Overlay
-                                gradient="linear-gradient(0deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0) 100%)"
-                                opacity={0.85}
-                                radius="xl"
-                                zIndex={0}
-                            />
-
-                            <div className='absolute bottom-0 left-0 right-0 text-left flex flex-col justify-center w-full'>
-                                <div className='w-full p-8'>
-
-                                    <p className='text-white text-xl '> <span className='font-bold text-3xl'>Arts and Cultural Promotions</span> <br />
-                                        <span className='font-semibold'>Showcasing Tanzanian Art:</span> We promote local artists by organizing exhibitions, art fairs, and cultural shows. <br />
-                                        <span className='font-semibold'>Music and Dance Performances:</span> Celebrating traditional and contemporary Tanzanian music and dance forms. <br />
-                                        <span className='font-semibold'>Craft and Heritage Markets:</span> Providing platforms for artisans to display and sell their crafts.
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-
-                    </SimpleGrid> */}
-
+                   
                 </section>
 
-                <section className="wrapper bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
+                {/* <section className="wrapper bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
                     <h2 className="h2-bold">Vision</h2>
                     <p className="p-regular-20 md:p-regular-24">To be the leading cultural and event management company in East Africa, showcasing the diverse heritage of Tanzania and promoting unity through arts and cultural celebrations.</p>
 
@@ -181,7 +110,7 @@ const AboutUs = () => {
 
                 </section>
 
-
+ */}
 
 
 

@@ -1,14 +1,14 @@
 import React from 'react'
 import { Footer, Header } from '../components'
 import { Image, SimpleGrid } from '@mantine/core'
-import artguy from '../assets/Mediaday/artguy.jpg'
-import sidegirls from '../assets/Mediaday/sidegirls.jpg'
-import talk from '../assets/Mediaday/talk.jpg'
-import tangazo from '../assets/Mediaday/tangazo.jpg'
-import tangazo2 from '../assets/Mediaday/tangazo2.jpg'
-import twogirls from '../assets/Mediaday/twogirls.jpg'
-import speech from '../assets/Mediaday/speech.jpg'
-import dancing from '../assets/Mediaday/dancing.jpg'
+import artguy from '../assets/CompressedMediaDay/artguy.webp'
+import sidegirls from '../assets/CompressedMediaDay/sidegirls.webp'
+import talk from '../assets/CompressedMediaDay/talk.webp'
+import tangazo from '../assets/CompressedMediaDay/tangazo.webp'
+import tangazo2 from '../assets/CompressedMediaDay/tangazo2.webp'
+import twogirls from '../assets/CompressedMediaDay/twogirls.webp'
+import speech from '../assets/CompressedMediaDay/speech.webp'
+import dancing from '../assets/CompressedMediaDay/dancing.webp'
 
 
 const Gallery = () => {
@@ -25,7 +25,7 @@ const Gallery = () => {
                     <div className='wrapper' style={{ resize: 'horizontal', overflow: 'hidden', maxWidth: '100%' }}>
                         <SimpleGrid
                             type="container"
-                            cols={{ base: 1, '300px': 2, '500px': 3 }}
+                            cols={{ base: 1, '300px': 1, '500px': 3 }}
                             spacing={{ base: 10, '300px': 'xl' }}
                         >
                             <Image
