@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Events, Footer, Header, HomeCarousel, InfiniteCarousel, VisitorsForm } from '../components'
+import { Contacts, Events, Footer, Header, HomeCarousel, InfiniteCarousel, Sponsors, VisitorsForm } from '../components'
 import { Button, Image, SimpleGrid } from '@mantine/core'
 import president from '../assets/drsamia.jpg'
 import groupphoto from '../assets/group-photo-2.jpg'
@@ -81,6 +81,8 @@ const Home = () => {
                     <HomeCarousel />
                 </section>
 
+                <Sponsors />
+
                 <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
                     <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
                         <div className="flex flex-col justify-center gap-8">
@@ -139,6 +141,8 @@ const Home = () => {
                 </section>
 
                 <InfiniteCarousel />
+
+                <Contacts />
 
                 <section className="wrapper bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
                     <h2 className="h2-bold text-center">Our Services</h2>

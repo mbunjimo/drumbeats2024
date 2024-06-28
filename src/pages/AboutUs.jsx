@@ -4,7 +4,7 @@ import tangazo from '../assets/Mediaday/tangazo.jpg'
 import collage1 from '../assets/Mediaday/collage1.png'
 import collage2 from '../assets/Mediaday/collage2.png'
 import baselogo from '../assets/BaseLogo.png'
-import { Footer, Header } from '../components'
+import { Contacts, Footer, Header } from '../components'
 import { Button, Image, Overlay, SimpleGrid } from '@mantine/core'
 
 
@@ -39,6 +39,10 @@ const AboutUs = () => {
                         </div>
                     </div>
                 </section>
+
+
+                <Contacts />        
+
 
 
                 <section className="wrapper bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
@@ -111,7 +115,6 @@ const AboutUs = () => {
                 </section>
 
  */}
-
 
 
 

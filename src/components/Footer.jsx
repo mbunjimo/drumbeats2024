@@ -49,7 +49,7 @@ const Footer = () => {
 
 
         <div className='text-center md:text-start mt-2'>
-        <p className='font-semibold text-xl my-5   md:my-1'>For sponsorships:</p>    
+        <p className='font-semibold text-xl my-5   md:my-1'>For Sponsorships:</p>    
           <p className='text-lg'>
             <a href="tel:+255744927614">+255 744 927 614</a>
           </p>
@@ -62,25 +62,25 @@ const Footer = () => {
             <a href="mailto:info@drumbeatzcarnival.co.tz">info@drumbeatzcarnival.co.tz</a>
           </p>
           {/* <p className='text-lg'>+255 676 890 789</p> */}
-          <p className='font-semibold text-xl my-5 md:my-3'>social media</p>
+          <p className='font-semibold text-xl my-5 md:my-3'>Social Media</p>
           <div className='flex flex-row items-center justify-center mt-3 mb-2 md:my-2 md:justify-start gap-3 '>
-            <Link to={'/'}>
+            <Link to={'https://www.facebook.com/profile.php?id=61561314334608'}>
               <Avatar src={facebook} radius=" " alt="it's me" mr={2} />
             </Link>
             <Link to={'https://www.instagram.com/drumbeats_carnival/'}>
               <Avatar src={instagram} radius=" " alt="it's me" mx={5} />
             </Link>
-            <Link to={'/'}>
+            <Link to={'https://www.instagram.com/drumbeats_carnival/'}>
               <Avatar src={youtube} radius=" " alt="it's me" ml={2} />
             </Link>
           </div>
         </div>
 
         <div className=' text-center md:text-start '>
-          <p className='font-semibold text-xl mt-3 mb-3 md:my-1'>Our address</p>
+          <p className='font-semibold text-xl mt-3 mb-3 md:my-1'>Our Address</p>
           <p className='flex justify-center md:justify-start w-full tect-center md:text-left '>Raha Towers, <br /> 3rd Floor, <br /> Dar es Salaam, Tanzania</p>
           <br />
-          <p> &copy; 2024 Drumbeats. All Rights reserved.</p>
+          <p> &copy; 2024 Drumbeats. All Rights Reserved.</p>
         </div>
       </SimpleGrid>
       {/* </div> */}
