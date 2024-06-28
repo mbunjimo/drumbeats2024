@@ -49,11 +49,11 @@ const Footer = () => {
 
 
         <div className='text-center md:text-start mt-2'>
-          <p className='font-semibold text-xl my-5   md:my-1'>contacts</p>
+        <p className='font-semibold text-xl my-5   md:my-1'>For sponsorships:</p>    
           <p className='text-lg'>
             <a href="tel:+255744927614">+255 744 927 614</a>
-
           </p>
+          <p className='font-semibold text-xl my-5   md:my-1'>Other Contacts:</p>
           <p className='text-lg'>
             <a href="tel:+255762543543">+255 762 543 543</a>
 
@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
 
         <div className=' text-center md:text-start '>
-          <p className='font-semibold text-xl mt-3 mb-3 md:my-1'>our address</p>
+          <p className='font-semibold text-xl mt-3 mb-3 md:my-1'>Our address</p>
           <p className='flex justify-center md:justify-start w-full tect-center md:text-left '>Raha Towers, <br /> 3rd Floor, <br /> Dar es Salaam, Tanzania</p>
           <br />
           <p> &copy; 2024 Drumbeats. All Rights reserved.</p>
