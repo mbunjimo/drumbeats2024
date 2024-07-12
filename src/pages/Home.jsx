@@ -11,6 +11,7 @@ import collage2 from '../assets/Mediaday/collage2.png'
 import sittingwoman from '../assets/sittingwoman.jpg'
 import { Link } from 'react-router-dom'
 import { formatDistanceToNowStrict } from 'date-fns';
+import {Helmet} from "react-helmet";
 
 
 const Home = () => {
@@ -26,17 +27,17 @@ const Home = () => {
 
     useEffect(() => {
         const targetDate = new Date('2024-07-24T00:00:00');
-    
+
         const calculateTimeLeft = () => {
             const now = new Date();
             const difference = targetDate - now;
-    
+
             if (difference > 0) {
                 const days = Math.floor(difference / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-    
+
                 setTimeLeft({
                     days,
                     hours,
@@ -54,7 +55,7 @@ const Home = () => {
                 });
             }
         };
-    
+
         const intervalId = setInterval(calculateTimeLeft, 1000);
         return () => clearInterval(intervalId);
     }, []);
@@ -75,6 +76,14 @@ const Home = () => {
 
     return (
         <div className="flex h-screen flex-col">
+
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Home - Tamasha la Utamaduni la kitaifa</title>
+                <link rel="canonical" href="www.drumbeats.co.tz" />
+            </Helmet>
+
             <Header />
             <main className="flex-1">
                 <section>
@@ -111,17 +120,17 @@ const Home = () => {
                         <p className='text-2xl text-center'>All About Ruvuma Utamaduni Festival, July 2024. Countdown to the carnival.</p>
                     </div>
                     <div className='flex flex-col w-full justify-center'>
-                    {!timeLeft.eventStarted ? (
-                        <div className='text-5xl mt-4 text-center'>
-                            <p className='block md:inline'>{timeLeft.days} days: </p>
-                            <p className="block md:inline">{timeLeft.hours} hours: </p>
-                            <p className="block md:inline">{timeLeft.minutes} minutes: </p>
-                            <p className="block md:inline">{timeLeft.seconds} seconds</p>
-                        </div>
-                    ) : (
-                        <p className='text-5xl mt-4 text-center'>The event has started!</p>
-                    )}
-                </div>
+                        {!timeLeft.eventStarted ? (
+                            <div className='text-5xl mt-4 text-center'>
+                                <p className='block md:inline'>{timeLeft.days} days: </p>
+                                <p className="block md:inline">{timeLeft.hours} hours: </p>
+                                <p className="block md:inline">{timeLeft.minutes} minutes: </p>
+                                <p className="block md:inline">{timeLeft.seconds} seconds</p>
+                            </div>
+                        ) : (
+                            <p className='text-5xl mt-4 text-center'>The event has started!</p>
+                        )}
+                    </div>
                     <div>
 
                     </div>

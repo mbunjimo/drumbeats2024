@@ -9,11 +9,19 @@ import tangazo2 from '../assets/CompressedMediaDay/tangazo2.webp'
 import twogirls from '../assets/CompressedMediaDay/twogirls.webp'
 import speech from '../assets/CompressedMediaDay/speech.webp'
 import dancing from '../assets/CompressedMediaDay/dancing.webp'
+import { Helmet } from 'react-helmet'
 
 
 const Gallery = () => {
     return (
         <div className="flex h-screen flex-col">
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Gallery - Tamasha la Utamaduni la kitaifa</title>
+                <link rel="canonical" href="www.drumbeats.co.tz/gallery" />
+            </Helmet>
+
             <Header />
             <main className="flex-1 text-center">
 

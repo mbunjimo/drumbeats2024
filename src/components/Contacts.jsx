@@ -26,7 +26,7 @@ const Contacts = () => {
                                             w={80}
                                         />
                                     </Center>
-                                    <p className='font-semibold mt-2 text-center text-black'>+255 744 927 614 <br /> sponsorships</p>
+                                    <p className='font-semibold mt-2 text-center text-black'>+255 744 927 614 <br /> sponsorships <br /> only</p>
                                 </div>
                             </Anchor>
                         </Center>

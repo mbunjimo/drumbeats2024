@@ -6,11 +6,20 @@ import collage2 from '../assets/Mediaday/collage2.png'
 import baselogo from '../assets/BaseLogo.png'
 import { Contacts, Footer, Header } from '../components'
 import { Button, Image, Overlay, SimpleGrid } from '@mantine/core'
+import { Helmet } from 'react-helmet'
 
 
 const AboutUs = () => {
     return (
         <div className="flex h-screen flex-col">
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>About Us - Tamasha la Utamaduni la kitaifa</title>
+                <link rel="canonical" href="www.drumbeats.co.tz/gallery" />
+            </Helmet>
+
+
             <Header />
             <main className="flex-1 text-center">
 
@@ -41,7 +50,7 @@ const AboutUs = () => {
                 </section>
 
 
-                <Contacts />        
+                <Contacts />
 
 
 
@@ -98,7 +107,7 @@ const AboutUs = () => {
                     </div>
 
 
-                   
+
                 </section>
 
                 {/* <section className="wrapper bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
