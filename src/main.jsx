@@ -13,6 +13,7 @@ import Home from './pages/Home.jsx';
 import Gallery from './pages/Gallery.jsx';
 import AboutUs from './pages/AboutUs.jsx';
 import Temp from './pages/Temp.jsx'; 
+import './i18n'; 
 
 const router = createBrowserRouter([
   {
