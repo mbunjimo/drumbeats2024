@@ -47,7 +47,10 @@ const HomeCarousel = () => {
           <div className='absolute bottom-0 left-0 right-0 text-center flex flex-col justify-center w-full'>
             <div className='w-full p-8'>
               <p className='h3-bold text-white text-center z-50'>
-                Drumbeats carnival 20-27<sup>th</sup> July 2024
+                Tamasha la Kitaifa la Utamaduni Agosti 2024  
+                {/* 20-27<sup>th</sup> */}
+                
+
               </p>
               <p className='text-white p-regular-20 md:p-regular-24'>
                 '120 TRIBES, 1 PEOPLE ' <br />
@@ -76,7 +79,7 @@ const HomeCarousel = () => {
           <div className='absolute bottom-0 left-0 right-0 text-center flex flex-col justify-center w-full'>
             <div className='w-full p-8'>
               <p className='h3-bold text-white text-center z-50'>
-              Drumbeats carnival Press launch
+              Tamasha la Kitaifa la Utamaduni Press launch
               </p>
               <p className='text-white p-regular-20 md:p-regular-24'>
                 The press launch for the national cultural festival was <br />

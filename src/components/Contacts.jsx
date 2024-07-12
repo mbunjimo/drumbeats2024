@@ -50,7 +50,7 @@ const Contacts = () => {
                     </Grid.Col>
                     <Grid.Col span={{ base: 12, md: 6, lg: 2 }}>
                         <Center>
-                            <Anchor href="mailto:info@drumbeatzcarnival.co.tz" underline="hover">
+                            <Anchor href="mailto:info@drumbeats.co.tz" underline="hover">
                                 <div className='flex flex-col'>
                                     <Center>
                                         <Image
@@ -58,7 +58,7 @@ const Contacts = () => {
                                             w={80}
                                         />
                                     </Center>
-                                    <p className='font-semibold mt-2 text-black' >info@drumbeatzcarnival.co.tz</p>
+                                    <p className='font-semibold mt-2 text-black' >info@drumbeats.co.tz</p>
                                 </div>
                             </Anchor>
                         </Center>

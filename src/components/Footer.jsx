@@ -59,7 +59,7 @@ const Footer = () => {
 
           </p>
           <p className='text-lg mb-3'>
-            <a href="mailto:info@drumbeatzcarnival.co.tz">info@drumbeatzcarnival.co.tz</a>
+            <a href="mailto:info@drumbeats.co.tz">info@drumbeats.co.tz</a>
           </p>
           {/* <p className='text-lg'>+255 676 890 789</p> */}
           <p className='font-semibold text-xl my-5 md:my-3'>Social Media</p>

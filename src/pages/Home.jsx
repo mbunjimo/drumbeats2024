@@ -95,7 +95,7 @@ const Home = () => {
                 <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
                     <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
                         <div className="flex flex-col justify-center gap-8">
-                            <h1 className="h1-bold">Utamaduni Festival 2024</h1>
+                            <h1 className="h1-bold">Tamasha la Kitaifa la Utamaduni  2024</h1>
                             <p className="p-regular-20 md:p-regular-24">A week-long celebration of Tanzanian culture in Songea, Ruvuma, from July 20th-26th, 2024. This festival will highlight the theme "Our Culture, Our Dignity," featuring music, dance, art, and traditional cuisine from Tanzania's 120 tribes. The festival aims to unite Tanzanians from all walks of life and attract international visitors.</p>
                             <Button variant="filled" color="#3A2C2C" className='max-w-[200px]' size="lg" radius="xl" onClick={handleButtonClick}>
                                 Get connected
@@ -115,7 +115,7 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section className="wrapper bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
+                {/* <section className="wrapper bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
                     <div className='flex w-full justify-center'>
                         <p className='text-2xl text-center'>All About Ruvuma Utamaduni Festival, July 2024. Countdown to the carnival.</p>
                     </div>
@@ -134,7 +134,7 @@ const Home = () => {
                     <div>
 
                     </div>
-                </section>
+                </section> */}
 
                 <section id="gallery" className="wrapper my-8 flex flex-row justify-between gap-8 md:gap-12">
                     <h2 className="h2-bold">Gallery</h2>
