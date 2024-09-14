@@ -6,6 +6,8 @@ import collage2 from '../assets/Mediaday/collage2.png'
 import baselogo from '../assets/BaseLogo.png'
 import { Contacts, Footer, Header } from '../components'
 import { Button, Image, Overlay, SimpleGrid } from '@mantine/core'
+import { Helmet } from 'react-helmet'
+
 
 
 const AboutUs = () => {

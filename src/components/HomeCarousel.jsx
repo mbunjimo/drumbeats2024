@@ -47,7 +47,7 @@ const HomeCarousel = () => {
           <div className='absolute bottom-0 left-0 right-0 text-center flex flex-col justify-center w-full'>
             <div className='w-full p-8'>
               <p className='h3-bold text-white text-center z-50'>
-                Tamasha la Kitaifa la Utamaduni Agosti 2024  
+                Tamasha la Kitaifa la Utamaduni September 23 <sup>rd</sup> 2024  
                 {/* 20-27<sup>th</sup> */}
                 
 
@@ -109,7 +109,7 @@ const HomeCarousel = () => {
               Celebrate Tanzanian Culture
               </p>
               <p className='text-white p-regular-20 md:p-regular-24'>The smiles radiate excitement and pride in showcasing Tanzania's rich cultural heritage.
-                 Join us for an unforgettable celebration of art, music, and culture this July!</p>
+                 Join us for an unforgettable celebration of art, music, and culture this September!</p>
             </div>
           </div>
 
